@@ -1,34 +1,234 @@
-html {
-    height: 100%;
-    width: 100%;
-    font-family: OpenSans;
-  }
-  
-  #logo {
-    width: 270px;
-    margin-right: 90px;
-    margin-left: 15px;
-  
-  }
-  
-  nav {
+*{
+    font-family: 'Open Sans', sans-serif;;
+}
+
+body{
+    margin: auto;
+}
+
+
+
+.barra{
+    width:100%;
+    height: 55px;
+    
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 15px;
+    font-weight: bold;
     display: flex;
-    flex-flow: row ;
-    align-content: space-evenly;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.caixona {
+    height: 650px;
+    display: flex;
+
+
+    flex-flow: row wrap;
+}
+
+.texto{
+    width:45%;
+    height: 100%;
+    background-color: #2e5554;
+    color: #f2f2f2;
+    font-size: 25px;
+
+
+    display: flex;
+    flex-direction:column;
+
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+}
+
+.simbolo{
+    display: flex;
+    align-self: flex-end;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+.texto1{
+    align-self: center;
+    padding-left: 30px;
+}
+
+.texto2{
+    align-self: center;
+    padding-left: -5px;
+}
+
+.logo1{
+    display: flex;
+    align-self: baseline;
+    margin-top:-250px;
+}
+
+
+
+.bitem:hover{
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    color: #64B9B6;
+}
+
+.caixa{
+    width: 55%;
+    height: 90%;
+   
+    
+
+    /*
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    */
+}
+
+.img{
     align-content: center;
     align-items: center;
-  }
-  
-  #nav_label {
-    display: flex;
-    flex-flow: row ;
-    align-content: space-evenly;
-    align-content: space-around;
-    align-items: space-between;
-  }
-  
-  label {
-    margin-left: 20px;
-    align-self: flex-end;
+    justify-content: center;
+}
+
+.caixinha {
+    width: 100%;
+    height: 100px;
+    background-color: #64B9B6;
+    font-size: 18px;
     
-  }
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    color: #ffff;
+}
+
+.botao {
+    border: none;
+    border-radius: 6px;
+    height: 40px;
+    width: 140px;
+}
+
+.botao:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+.caixona2 {
+    height: 650px;
+    display: flex;
+
+
+    flex-flow: row wrap;
+}
+
+.caixa2{
+    width: 40%;
+    height: 100%;
+    background-color: #f5f5f5;
+}
+
+.textoX{
+    width:60%;
+    height: 100%;
+    background-color: #e2dddd;
+    color: #ffffff;
+    font-size: 25px;
+
+
+    display: flex;
+    flex-direction:column;
+
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+}
+
+#titulo {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    font-size: 20px;
+
+align-self: center;
+}
+
+#moveis {
+    color:#64B9B6
+}
+
+#textinho{
+    font-size: 22px;
+    text-align: justify;
+    padding: 19px;
+    color: #000000;
+}
+
+.tudo {
+    display: flex;
+    justify-items: space-evenly;
+    flex-direction: row;
+    justify-items: baseline;
+    justify-content: space-evenly;
+}
+
+.text1{
+    padding-left: 40px;
+}
+
+.text2{
+    padding-left: 10px;
+}
+
+.text3{
+    padding-left: 20px;
+}
+
+.personalize {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 50px;
+}
+
+#TP{
+    display: flex;
+    flex-flow: column;
+   
+    justify-content: space-evenly;
+    margin-top: -30px;
+    align-items: center;
+}
+
+#imagem{
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#label {
+    width: 500px;
+    display: flex;
+    flex-flow: column;
+    align-items: stretch; 
+    text-align: justify;   
+}
+
+h1[alt=cor]{
+    color:  #64B9B6;
+   
+}
+
+

@@ -1,0 +1,179 @@
+/* adicionando font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    font-family: 'Open Sans', sans-serif;;
+}
+
+/* manipulando cores, com variaveis */
+:root{
+    --color-neutral-0:#ffffff;
+    --color-neutral-10: #D9D9D9;
+    --color-neutral-30: #000000;
+    --color-neutral-40: #000000;
+}
+
+/* zerando configuração do projeto */
+*{
+    margin: 0; /* zerando a margem */
+    padding: 0; /* zerando o espaçamemnto */
+    box-sizing: border-box; /* nao calcular a dimensao de um elemento (nao somar bordas e margens com altura e largura) */
+    letter-spacing: 1px; /* espaçamento entre as letras */
+}
+main{
+    height: 80vh;
+}
+footer{
+    width: 100%; /* a largura do rodapé */
+    color: var(--color-neutral-40); /* cor do texto */
+}
+
+/* tirar o sublinhado das imagens */
+.footer-link{
+    text-decoration: none;
+}
+
+#footer_content{
+    background-color: var(--color-neutral-10); /* mudando toda a cor de fundo do rodapé */
+    background-image: url("img/Logo-removebg-preview (1).png");
+    background-repeat: no-repeat;
+    /* background-image:; */
+    background-position: 55% 160%;
+    display: grid; /* distribuir os itens em colunas */
+    grid-template-columns: repeat(5,1fr); /* divisão sera em 4 colunas */
+    padding: 5rem 3.5rem; /* rem é uma unidade escalavel e relativa, ele varia de acordo com a dimensao root do seu navegador (por padrao essa unidade é 16px). maior parte das vezes 1rem=16px */
+}
+
+/* primeira coluna titulo */
+#footer_contacts h3{
+    margin-bottom: 0.75rem;
+}
+
+
+/* primeira coluna icones */
+#footer_social_media{
+    display: flex; /* quando colocamos essa propriedade em um elemento, esse elemento se torna um flex container, a partir dai podemos manipular todos os elementos filhos deste flex container com propriedades novas */
+    gap: 2rem; /* espaçamento */
+    margin-top: 1.5rem; /* margem de cima */
+}
+#footer_social_media .footer-link{
+    display: flex;
+    align-items: center; /* alinhando itens no fundo */
+    justify-content: center; /* alinhando itens no fundo */
+    height: 2.7rem; /* definir altura */
+    width: 2.5rem; /* definir largura */
+    color: var(--color-neutral-40); /* mudando cor dos icones para branco */
+    border-radius: 50%; /* deixando a borda de fundo redonda */
+    transition: all 0.4s; /* transicao da opacidade */
+}
+#footer_social_media .footer-link i{
+    font-size: 1.rem; /* altera o tamanho dos icones */
+}
+#footer_social_media .footer-link:hover{
+    opacity: 0.8; /* diminuir a opacidade */
+}
+
+/* configurando cor de fundo instagram */
+#instagram{
+    background: linear-gradient(#64B9B6, #64B9B6, #64B9B6);
+}
+/* configurando cor de fundo facebook */
+#facebook{
+    background-color: #64B9B6;
+}
+/* configurando cor de fundo whatsapp */
+#whatsapp{
+    background-color: #64B9B6;
+}
+
+/* lista */
+.footer-list{
+    display: flex; /* deixa a lista em formato de linha */
+    flex-direction: column; /* deixa o texto em colunas */
+    gap: 1.0rem; /* aumentar o espacamento, definir espaco entre linhas e colunas*/
+    list-style: none; /* tira a bolinha da lista */
+}
+.footer-list .footer-link{
+color: var(--color-neutral-30);
+transition: all 0.4s; /* transicao do hover */
+}
+.footer-list .footer-link:hover{
+    color: #64B9B6; /* hover da lista */
+}
+
+ .footer_contacts:hover{
+    color: #64B9B6; /* hover da lista */
+}
+
+#footer_subscribe{
+    display: flex; /* deixa a lista em formato de linha */
+    flex-direction: column; /* deixa o texto em colunas */
+    gap: 1.7rem; /* aumentar o espaçamento, definir espaço entre linhas e colunas */
+}
+
+#footer_subscribe p{
+    color: var(--color-neutral-30);
+}
+
+/* configurar label */
+#input_group{
+    display: flex; /* deixa toda a label e a imagem em linha */
+    align-items: center; /* centralizar icones */
+    background-color: var(--color-neutral-0);
+    border-radius: 4px;
+}
+#input_group input{
+    all: unset; /* tirar toda a configuracao padrao */
+    padding: 0.75rem; /* aumentando o tamanho da label */
+    width: 100%; /* largura de 100% dentro da lista */
+}
+
+/* botao da label */
+#input_group button{
+    background-color: #64B9B6; /* mudar cor de fundo do botao */
+    border: none; /* tirar borda */
+    color: var(--color-neutral-40); /* cor do icone */
+    padding: 0px 1.25rem; /* aumentar o tamanho do botao */
+    font-size: 1.125rem;/* aumentar a font do icone */
+    height: 100%; /* altura de 100% */
+    border-radius: 0px 4px 4px 0px; /* arredondando o botao */
+    cursor: pointer; /* mudar cursor quando o mouse passa por cima */
+    transition: all 0.4s;
+}
+
+/* hover do botao */
+#input_group button:hover{
+    opacity: 0.8;
+}
+
+/* parte do copyright */
+#footer_copyright{
+    display: flex; /* deixa toda a label e a imagem em linha */
+    justify-content: center;
+    background-color: var(--color-neutral-0); 
+    font-size: 0.9rem;/* Diminuindo tamanho da letra */
+    padding: 1.5rem; /* Aumentando o tamanho do fundo */
+    font-weight: 100; /* mudando a grossura do texto */
+}
+
+/* tornando responsivo (muda de forma certa quando em mobile) */
+@media screen and (max-width: 768px) /* definindo o tamanho do display */
+{
+    #footer_content{
+        grid-template-columns: repeat(2,1fr); /* deixar em apenas 2 colunas */
+        gap: 2rem; /* espaçamento entre cada coluna */
+    }
+}
+@media screen and (max-width:426px) /* Definindo o tamanho do display */
+{
+    #footer_content{
+        grid-template-columns: repeat(1,1fr); /* Deixar apenas em 1 coluna */
+        padding: 3rem 2rem; /* Definir os espaçamentos */
+    }
+}
+
+
+::placeholder {
+    font-size: 12px;
+}
+
